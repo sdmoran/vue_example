@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Product App</title>
 </head>
 <body>
-    <h1>Test</h1>
+    <div id="app">
+        <h1>{{ product }}</h1>
+
+        <div class="product-image">
+            <img v-bind:src="image">
+        </div>
+        <div class="product-info">
+            <p v-if="inStock">In stock</p>
+            <p v-else>Out of stock</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
